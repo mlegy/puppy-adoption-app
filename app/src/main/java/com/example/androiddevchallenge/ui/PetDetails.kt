@@ -17,13 +17,13 @@ package com.example.androiddevchallenge.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
@@ -52,7 +52,6 @@ fun PetDetails(petId: String) {
 
     val petState = PetsData.petLiveData.observeAsState()
     val pet = petState.value
-
 
     if (pet != null) {
         Column(
@@ -173,7 +172,6 @@ fun About(bio: String) {
         style = TextStyle(fontSize = 20.sp)
     )
     Text(text = bio, modifier = Modifier.padding(8.dp))
-
 }
 
 @Composable
@@ -183,7 +181,8 @@ fun AdoptButton() {
         horizontalArrangement = Arrangement.Start
     ) {
         Button(
-            onClick = { }, modifier = Modifier
+            onClick = { },
+            modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)
         ) {
